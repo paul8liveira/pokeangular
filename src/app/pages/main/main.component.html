@@ -1,0 +1,18 @@
+<div *ngIf="pokemons$ | async as _pokemons">
+    <input
+        (input)="onSearchChange($event)"
+        type="text"
+        placeholder="Digite o nome de um Pokémon para pesquisar!"
+    />
+    <ul>
+        <li *ngFor="let pokemon of _pokemons" routerLink="pokemon/{{pokemon.number}}">
+            <img
+                [src]="apiService.pokemonImage(pokemon.number)"
+                alt="{{pokemon.name}}"
+            />
+            <span>
+                #{{pokemon.number}} {{pokemon.name}}
+            </span>
+        </li>
+    </ul>
+</div>

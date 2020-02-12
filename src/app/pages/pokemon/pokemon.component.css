@@ -1,0 +1,50 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;    
+}
+
+div .card {
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 4px;
+
+    background: #fff;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+header span {
+    text-transform: capitalize;
+    line-height: 16px;
+}
+
+header aside {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+
+    background: #ddd;
+}
+
+.text-frame {
+    min-height: 100px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+
+    font-size: 16px;
+
+    background: #ddd;
+}

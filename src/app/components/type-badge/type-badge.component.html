@@ -1,0 +1,6 @@
+<div 
+    *ngFor="let _type of types"
+    class="type-badge" 
+    [ngStyle]="{'background-color': getBgType(_type.type)}">
+    {{_type.type.name}}
+</div>                                           

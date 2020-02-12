@@ -1,0 +1,27 @@
+<div>
+    <div class="card" *ngIf="pokemon$ | async as _pokemon">
+        <header>
+            <aside>
+                <img
+                    [src]="apiService.pokemonImage(_pokemon.id)"
+                    alt="{{_pokemon.name}}"
+                />
+            </aside>
+            <div class="text-frame">
+                <span>
+                    <strong>#{{_pokemon.id}}</strong> {{_pokemon.name}}
+                </span>
+                <span>
+                    <strong>Height:</strong> {{_pokemon.height}}&#34;
+                </span>
+                <span>
+                    <strong>Weight:</strong> {{_pokemon.weight}} lb
+                </span>
+                <app-type-badge [types]="_pokemon.types"></app-type-badge>                                        
+            </div>
+        </header>
+        <div class="text-frame">
+            {{ _pokemon.flavorText }}
+        </div>
+    </div>
+</div>
